@@ -1,4 +1,4 @@
-package technicalblog.service;
+package technicalblog.Service;
 
 import org.springframework.stereotype.Service;
 import technicalblog.model.Posts;
@@ -8,8 +8,7 @@ import java.util.Date;
 
 @Service
 public class PostService {
-
-    public ArrayList<Posts> getAlllPost(){
+    public ArrayList<Posts> getAllPosts(){
         Posts post1 = new Posts();
         post1.setTitle("Post 1");
         post1.setBody("Post Body 1");
@@ -31,19 +30,5 @@ public class PostService {
         posts.add(post3);
 
         return posts;
-
     }
-
-    public ArrayList<Posts> getOnePost(){
-        Posts post1 = new Posts();
-        post1.setTitle("User post");
-        post1.setBody("User Post Body 1");
-        post1.setDate(new Date());
-
-        ArrayList<Posts> posts = new ArrayList<>();
-        posts.add(post1);
-
-        return posts;
-    }
-
 }
