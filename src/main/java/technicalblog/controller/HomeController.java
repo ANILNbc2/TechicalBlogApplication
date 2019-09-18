@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import technicalblog.Service.PostService;
 import technicalblog.model.Posts;
 import technicalblog.service.PostService;
 
@@ -20,6 +19,7 @@ public class HomeController {
     @RequestMapping("/")
     public String getAllPosts(Model model){
         ArrayList<Posts> posts = postService.getAlllPost();
+
         model.addAttribute("posts", posts);
 
         return "index";
