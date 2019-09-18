@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import technicalblog.Service.PostService;
 import technicalblog.model.User;
-import technicalblog.service.PostService;
 
 @Controller
 public class UserController {
@@ -34,8 +34,8 @@ public class UserController {
 
     @RequestMapping(value = "users/logout", method=RequestMethod.POST)
     public String logoutUser(Model model){
-        model.addAttribute("posts", postService.getAlllPost());
-        return "index";
+        model.addAttribute("posts", postService.getAllPosts());
+        return "redirect:/";
     }
 
 }
